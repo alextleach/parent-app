@@ -15,7 +15,7 @@
             <li class="grid-nav__right__list__item grid-nav__image circle"><img src="http://placecera.com/80/80" class="grid-nav__image__pic responsive-image circle"></li>
             <li class="grid-nav__right__list__item">{{#link-to "grid.parent-sitter"}}<i class="fa fa-th-large grid-nav--icon__grid" aria-hidden="true"></i>{{/link-to}}</li>
             <li class="grid-nav__right__list__item">{{#link-to "grid.parent-sitter"}}<i class="fa fa-users grid-nav--icon__users" aria-hidden="true"></i>{{/link-to}}</li>
-            <li class="grid-nav__right__list__item">{{#link-to "grid.parent-sitter"}}<i class="fa fa-comments grid-nav--icon__comments" aria-hidden="true"></i>{{/link-to}}</li>
+            <li class="grid-nav__right__list__item"><a class="modal-trigger" href="#modal1"><i class="fa fa-comments grid-nav--icon__comments" aria-hidden="true"></i></a></li>
           </ul>
         </div>
 
@@ -52,4 +52,15 @@
       </div>
     </footer>
   </div>
+
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
+
 </div>
