@@ -5,7 +5,7 @@
       <div class="grid-nav__content">
 
         <div class="grid-nav__left">
-          <span>{{session.currentUser.profile.location}}</span>
+          <span>{{session.currentUser.email}} • {{session.currentUser.profile.location}}</span>
         </div>
         <div class="grid-nav__center">
           {{#link-to "guest.welcome"}}<i class="fa fa-child grid-nav__logo" aria-hidden="true"></i>{{/link-to}}

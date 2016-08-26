@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+    DS: {
+      host: 'http://localhost:3333',
+    },
     modulePrefix: 'parent-app',
     environment: environment,
     rootURL: '/',
@@ -10,15 +13,27 @@ module.exports = function(environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      }
+      },
     },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    flashMessageDefaults: {
+      // flash message defaults
+      timeout: 10000,
+    },
   };
 
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: `${ENV.DS.host}/token`,
+    tokenPropertyName: 'access_token',
+  };
+  ENV['ember-simple-auth'] = {
+    baseURL: '/',
+    routeAfterAuthentication: 'guest'
+  };
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

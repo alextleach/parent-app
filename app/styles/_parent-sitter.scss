@@ -1,5 +1,20 @@
 // These are the styles for both parent-sitter, and sitter-parent templates.
-$main: #03b462;
+
+.parent-sitter-banner {
+  width: 100%;
+  background: #fbfbfb;
+  background-image: linear-gradient(180deg, rgba(255,255,255,0), #fbfbfb),linear-gradient(70deg, lighten($main,55%) 32%, #e0f1ff);
+  color: #3e3e3e;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+}
+
+.grid-container {
+  width: 64%;
+  margin: 0 auto;
+}
+
 a:hover {
   cursor: pointer;
 }
@@ -7,6 +22,7 @@ a:hover {
 .sitter-card {
   border: 0;
 }
+
 .card-image-gradient {
   width: 100%;
   height: 100%;
@@ -17,12 +33,15 @@ a:hover {
   left: 0;
   right: 0;
 }
+
 .card-image {
   width: 100%;
+
   &__wrapper {
     position: relative;
     width: 100%;
     overflow: hidden;
+
     &::before {
       content: "";
       width: 100%;
@@ -49,22 +68,27 @@ a:hover {
 .fa-star-o {
   color: gold;
 }
+
 .fa-envelope-o,
 .fa-eye,
 .fa-thumbs-o-up {
   font-size: 2rem;
   color: $main;
+
   &:hover {
     font-weight: bold;
   }
 }
+
 .fa-map-pin {
   color: blue;
   font-size: 1.2rem;
 }
+
 .fa-users {
   color: blue;
 }
+
 .user-action-icons {
   width: 90%;
   padding: 0.5rem 1rem;
@@ -72,12 +96,14 @@ a:hover {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+
   &__item {
     align-content: center;
     align-items: center;
     text-align: center;
     margin: auto;
   }
+
   &__button {
     background: transparent;
     border: none;
@@ -85,12 +111,14 @@ a:hover {
     padding: 0;
   }
 }
+
 .family-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
 }
+
 .family-info-2 {
   display: flex;
   justify-content: space-between;
